@@ -1,6 +1,6 @@
 
 export async function generateStaticParams(){
-  const res = await fetch("https://dummyjson.com/users?limit=3",{next:{
+    const res = await fetch("https://dummyjson.com/users?limit=3",{next:{
     revalidate : 50
   }});
   const data = await res.json();
